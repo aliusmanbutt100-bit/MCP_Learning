@@ -1,0 +1,9 @@
+Flow kya hoga:
+
+Client MCP server se connect hoga (jo already ho chuka hai)
+Client list_tools() se server ke tools nikalega
+Ye tools ek format mein convert karne padenge jo LLM samajh sake (jaisa bind_tools() mein LangChain khud karta tha, yahan hum manually karenge)
+User ka message + tools LLM ko bhejenge
+LLM decide karega kaunsa tool chahiye, aur wapas bolega "ye tool call karo, ye parameters ke saath"
+Hum wo tool MCP server se call karenge (call_tool() se — jo aap already jaante ho)
+Result wapas LLM ko dikhayenge, taake wo final answer bana sake
